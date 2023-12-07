@@ -60,12 +60,16 @@ accordionContent.forEach(e=>e.style.display="none")
 
 function showAccordion(){
 
+
+   
     if(this.nextElementSibling.style.display == "none"){
+
+    
         this.nextElementSibling.style.display = "block";
         this.childNodes[1].textContent = "-"
         console.log(this.childNodes[1])
 
-    }else if(this.nextElementSibling.style.display !== "none"){
+    }else if(this.nextElementSibling.style.display != "none"){
         this.nextElementSibling.style.display = "none"
         this.childNodes[1].textContent = "+"
     }
