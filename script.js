@@ -98,17 +98,30 @@ function leave (){
 }
 
 
-// document.querySelector(".nav_right").style.display = "none"
-// document.querySelector("#hamburger").style.display = "none"
 
-// let hamburger = document.querySelector(".hamburgerMenu")
+// Hamburger Menue
 
-// hamburger.addEventListener("click", displayMenu)
 
-// function displayMenu(){
-//    let content = document.querySelector("#hamburger")
-//    content.classList.remove("nav_hamburger")
-//     content.classList.add("nav_hamburger_show")
 
-// }
+let hamburger = document.querySelector(".hamburgerMenu")
+
+hamburger.addEventListener("click", displayMenu)
+
+
+function displayMenu(e){
+    e.preventDefault()
+    let content = document.querySelector(".nav_hamburger")
+
+    console.log(content.classList)
+    if(content.classList.contains("nav_hamburger_hide")){
+
+        content.classList.remove("nav_hamburger_hide")
+        content.classList.add("nav_hamburger_show")
+    }else {
+        content.classList.remove("nav_hamburger_show")
+       content.classList.add("nav_hamburger_hide")
+        content.style.display == "none"
+    }
+
+}
 
