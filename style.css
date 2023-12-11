@@ -42,7 +42,7 @@ padding: 0.5rem 1rem;
     background-color: white;
 }
 
-.hamburgerMenu span:{
+.hamburgerMenu span:hover{
    background-color: red;
 }
 
