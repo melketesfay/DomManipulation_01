@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
 }
 
@@ -11,54 +11,56 @@ body {
     margin: 0;
 }
 
-nav{
-    
+nav {
+
     margin: auto;
     background-color: red;
 }
 
-.navbar{
+.navbar {
     margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
 
 }
 
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     color: white;
-font-size: 3rem;
-font-weight: bold;
-padding: 0.5rem 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
 
 }
 
 /* Hamburger*/
 
-.hamburgerMenu:hover{
+.hamburgerMenu:hover span {
+    background-color: red;
+}
+
+.hamburgerMenu:hover {
     background-color: white;
 }
 
-.hamburgerMenu span:hover{
-   background-color: red;
-}
 
 
-.nav_hamburger a{
+
+.nav_hamburger a {
     text-decoration: none;
     color: white;
-font-size: 3rem;
-font-weight: bold;
-padding: 0.5rem 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
 
-margin-bottom: 1rem;
-width:100%;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-.nav_hamburger ul{
+.nav_hamburger ul {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -73,67 +75,68 @@ width:100%;
 }
 
 
-.nav_hamburger li:hover{
+.nav_hamburger li:hover {
     width: 100%;
     background-color: rgb(163, 2, 2);
     text-align: center;
-    
-    
+
+
 }
 
 .nav_hamburger_dropdown_1 {
     opacity: 0;
     position: relative;
-    animation: dropdown 0.5s linear  forwards;
-   
-    
-   
+    animation: dropdown 0.5s linear forwards;
+
+
+
 }
 
 .nav_hamburger_dropdown_2 {
     opacity: 0;
     position: relative;
     animation: dropdown 0.5s linear 0.5s forwards;
-   
-   
+
+
 }
 
 .nav_hamburger_dropdown_3 {
     opacity: 0;
     position: relative;
     animation: dropdown 0.5s linear 1s forwards;
-   
+
 }
 
 
 
 
 
-.hamburgerMenu{
+.hamburgerMenu {
     display: none;
     flex-direction: column;
     gap: 1rem;
     height: 50%;
 }
-.hamburgerMenu span{
+
+.hamburgerMenu span {
     width: 4rem;
     height: 0.5rem;
     background-color: white;
 }
 
 
-.nav_hamburger_show{
-display: block;
-display: flex;
-flex: 1;
-justify-content: center;
+.nav_hamburger_show {
+    display: block;
+    display: flex;
+    flex: 1;
+    justify-content: center;
 
-align-items: center;
+    align-items: center;
 
 
 }
 
-.nav_hamburger_hide{
+.nav_hamburger_hide {
     display: none;
 }
 
@@ -143,7 +146,7 @@ align-items: center;
 
 /* Hamburger*/
 
-.nav_right ul{
+.nav_right ul {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -157,26 +160,26 @@ align-items: center;
     gap: 2rem;
 }
 
-.tab_container{
+.tab_container {
     display: flex;
     justify-content: center;
     background-color: aquamarine;
     max-width: 100%;
 }
 
-.tab{
+.tab {
     display: flex;
     justify-content: space-evenly;
     font-size: 3vw;
     width: 100%;
 }
 
-.tab_1{
-   
+.tab_1 {
+
     padding: 0 3vw;
 }
 
-.toogle{
+.toogle {
     display: none;
 }
 
@@ -186,7 +189,7 @@ align-items: center;
     padding-left: 0px;
 } */
 
-.firstListChild{
+.firstListChild {
     list-style: none;
     text-decoration: none;
     padding-left: 0px;
@@ -209,12 +212,12 @@ align-items: center;
    
 } */
 
-.firstListChild li{
+.firstListChild li {
     display: flex;
     flex-direction: column;
 }
 
-.listTitle{
+.listTitle {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
@@ -222,7 +225,7 @@ align-items: center;
 }
 
 
-.bullet{
+.bullet {
     font-size: 3rem;
     font-weight: bold;
     color: white;
@@ -236,7 +239,7 @@ align-items: center;
 }
 
 li p {
-   
+
     background-color: rgb(204, 199, 199);
 }
 
@@ -244,37 +247,38 @@ li p {
 
 
 @media screen and (max-width: 600px) {
-    .hamburgerMenu{
+    .hamburgerMenu {
         display: flex;
     }
-    .nav_right{
+
+    .nav_right {
         display: none;
     }
 
-    nav{
+    nav {
         width: 100%;
         margin: auto;
         background-color: red;
     }
-    
-    .navbar{
+
+    .navbar {
         margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+
     }
 
-   
+
 }
 
 @media screen and (min-width: 600px) {
-    .nav_hamburger{
+    .nav_hamburger {
         display: none;
     }
-    
+
 }
 
 
@@ -283,17 +287,17 @@ li p {
 
 
 @keyframes dropdown {
-    from{
-        bottom: 100px;
+    from {
+        bottom: 200px;
         color: red;
         opacity: 0;
-        
+
     }
 
     to {
         bottom: 0px;
         color: wheat;
         opacity: 1;
-       
+
     }
 }

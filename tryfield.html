@@ -1,54 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <style>
-      .container {
-        width: 50vw;
-        height: 50vw;
-        background-color: red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    .container {
+      width: 50vw;
+      height: 50vw;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chi {
+      position: relative;
+      width: 10vw;
+      height: 10vw;
+      background-color: green;
+    }
+
+    .drop {
+      animation: drowpdown 3s linear 1s 1;
+    }
+
+    @keyframes drowpdown {
+      from {
+        top: 100%;
       }
 
-      .chi {
-        position: relative;
-        width: 10vw;
-        height: 10vw;
-        background-color: green;
+      to {
+        top: 0%;
       }
+    }
+  </style>
+</head>
 
-      .drop {
-        animation: drowpdown 3s linear 1s 1;
-      }
-
-      @keyframes drowpdown {
-        from {
-          top: 100%;
-        }
-        to {
-          top: 0%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="chi">
-        <h2>Hallo</h2>
-      </div>
+<body>
+  <div class="container">
+    <div class="chi">
+      <h2>Hallo</h2>
     </div>
-  </body>
+  </div>
+</body>
 
-  <script>
-    document.addEventListener("click", popup);
+<script>
 
-    function popup() {
+
+  let docs = {
+    elem_1: "hallo",
+    elem2: document.querySelector(".chi")
+  }
+
+  function test() {
+    let car = "toyota"
+    let model = "carina"
+    let year = 1989
+    function conlog() {
+      console.log(car, model, year)
+
+    }
+
+    let popup = function () {
       document.querySelector(".chi").classList.add("drop");
     }
-  </script>
+    return [car, model, year, popup]
+  }
+
+  document.addEventListener("click", test()[3]);
+  console.log(docs.elem2)
+
+  let modYe = test()[2]
+  console.log(modYe + " hallo")
+
+
+  function scopetest() {
+    let arr = [1, 2, 3, 4, 5, 6];
+    let newAr = [];
+    let thir = []
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0) {
+        newAr.push(arr[i])
+      }
+      thir.push(arr[i])
+
+
+    }
+
+    return [...newAr] + [...thir];
+  }
+
+  console.log(scopetest())
+</script>
+
 </html>
