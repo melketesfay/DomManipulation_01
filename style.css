@@ -33,6 +33,7 @@ nav {
     font-size: 3rem;
     font-weight: bold;
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 
 }
 
@@ -40,6 +41,7 @@ nav {
 
 .hamburgerMenu:hover span {
     background-color: red;
+
 }
 
 .hamburgerMenu:hover {

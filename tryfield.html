@@ -45,6 +45,7 @@
       <h2>Hallo</h2>
     </div>
   </div>
+  <button onclick="display()">ciao</button>
 </body>
 
 <script>
@@ -65,7 +66,7 @@
     }
 
     let popup = function () {
-      document.querySelector(".chi").classList.add("drop");
+      document.querySelector(".chi").classList.toggle("drop");
     }
     return [car, model, year, popup]
   }
@@ -77,6 +78,8 @@
   console.log(modYe + " hallo")
 
 
+  // good Closure example
+
   function scopetest() {
     let arr = [1, 2, 3, 4, 5, 6];
     let newAr = [];
@@ -84,16 +87,25 @@
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] % 2 == 0) {
         newAr.push(arr[i])
+      } else {
+        thir.push(arr[i])
       }
-      thir.push(arr[i])
+
 
 
     }
+    function getValue() {
+      return [arr, newAr, thir];
+    }
 
-    return [...newAr] + [...thir];
+    return getValue()
+
+
   }
 
-  console.log(scopetest())
+  let display = () => { console.log(scopetest()[2]) }
+  document.querySelector(".container").addEventListener("mouseenter", console.log(scopetest()[0]))
+
 </script>
 
 </html>
