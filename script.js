@@ -78,7 +78,7 @@ function showAccordion(){
 
 
 
-let navButtons = document.querySelectorAll(".navbar a")
+let navButtons = document.querySelectorAll(".nav_focus")
 
 console.log(navButtons)
 navButtons.forEach(e=>e.addEventListener("mouseenter",focus ))
@@ -123,5 +123,17 @@ function displayMenu(e){
         content.style.display == "none"
     }
 
+}
+
+hamburger.addEventListener("click", animateDrop)
+
+function animateDrop(){
+    let dropItems = document.querySelectorAll(".nav_hamburger ul li")
+    
+    
+   dropItems[0].classList.add("nav_hamburger_dropdown_1")
+   dropItems[1].classList.add("nav_hamburger_dropdown_2")
+   dropItems[2].classList.add("nav_hamburger_dropdown_3")
+    
 }
 
