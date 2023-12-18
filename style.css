@@ -88,7 +88,7 @@ nav {
 .nav_hamburger_dropdown_1 {
     opacity: 0;
     position: relative;
-    animation: dropdown 0.5s linear forwards;
+    animation: dropdown 0.5s cubic-bezier(1, 0.01, 1, 0.85) forwards;
 
 
 
@@ -97,7 +97,7 @@ nav {
 .nav_hamburger_dropdown_2 {
     opacity: 0;
     position: relative;
-    animation: dropdown 0.5s linear 0.5s forwards;
+    animation: dropdown 0.5s cubic-bezier(1, 0.01, 1, 0.85) 0.5s forwards;
 
 
 }
@@ -105,7 +105,7 @@ nav {
 .nav_hamburger_dropdown_3 {
     opacity: 0;
     position: relative;
-    animation: dropdown 0.5s linear 1s forwards;
+    animation: dropdown 0.5s cubic-bezier(1, 0.01, 1, 0.85) 1s forwards;
 
 }
 
@@ -293,13 +293,17 @@ li p {
         bottom: 200px;
         color: red;
         opacity: 0;
+        background-color: red;
 
     }
 
     to {
         bottom: 0px;
-        color: wheat;
+        color: white;
         opacity: 1;
+        background-color:rgb(163, 2, 2) ;
+        width: 100%;
+        text-align: center;
 
     }
 }
